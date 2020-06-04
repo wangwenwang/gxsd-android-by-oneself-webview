@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    signingConfigs {
+
+        release {
+            storeFile file('../gxsd.jks')
+            storePassword "gxsd12"
+            keyAlias "gxsd"
+            keyPassword "gxsd12"
+        }
+        debug {
+            storeFile file('../gxsd.jks')
+            storePassword "gxsd12"
+            keyAlias "gxsd"
+            keyPassword "gxsd12"
+        }
+    }
+    // 别称：gxsd
+    // 密码：gxsd12
+    // 微信登录应用签名：1ea98a692ec423c9d59ce75ff7a2b3c7
+
+    defaultConfig {
+        applicationId "mobi.gxsd.gxsd_android"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.tete = \"wechat_sdk_tst.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.alibaba:fastjson:1.1.55.android'
+    //微信登录
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    compile files('libs/json-simple-1.1.1.jar')
+    compile 'com.qianwen:update-app:3.5.2'
+    compile 'com.allenliu.versionchecklib:library:2.2.0'
+    compile 'com.baoyz.actionsheet:library:1.1.7'
+    compile files('libs/posprinterconnectandsendsdk.jar')
+    //百分布局库
+    implementation 'com.zhy:percent-support-extends:1.0.1'
+    compile 'com.zhy:okhttputils:2.6.2'
+}

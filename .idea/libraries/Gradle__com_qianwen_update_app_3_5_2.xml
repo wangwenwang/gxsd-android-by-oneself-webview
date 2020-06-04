@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.qianwen:update-app-3.5.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/update-app-3.5.2.aar/962d442208979635fd07597ad66f6e05/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/update-app-3.5.2.aar/962d442208979635fd07597ad66f6e05/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qianwen/update-app/3.5.2/177ef36b46ef2185a5b03ef9dbc9b7580cba256b/update-app-3.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
